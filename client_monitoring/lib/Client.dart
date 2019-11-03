@@ -10,5 +10,8 @@ class Client {
   String firstName;
   String lastName;
 
+  factory Client.fromMappedJson(Map<String, dynamic> json) => _$ClientFromJson(json);
+  Map<String, dynamic> toJson() => _$ClientToJson(this);
+
 
 }
