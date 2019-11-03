@@ -66,4 +66,10 @@ class DBClient {
     db.delete("Client", where: "id = ?", whereArgs: [id]);
   }
 
+  getAllClients() async{
+    final db = await database;
+    var res = await db.query("Client");
+    return res;
+  }
+
 }
